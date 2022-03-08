@@ -103,13 +103,13 @@ img {
 }
 
 .current::after {
-  content:'';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 4px;
-  background-color:var(--primary-color-accent);
+  background-color: var(--primary-color-accent);
   border-radius: 2px;
 }
 .nav-link {
@@ -217,6 +217,45 @@ img {
   cursor: pointer;
   background: var(--secondary-color-btn);
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background:var(--primary-color-bg);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.model-close{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  background: var(--primary-color-bg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 /* features */
 .features {
   padding-top: 94px;
@@ -268,22 +307,22 @@ img {
 .make-item:not(:last-child) {
   margin-right: 30px;
 }
-.make-item{
+.make-item {
   position: relative;
 }
-.make-item-label{
+.make-item-label {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 27px;
   background: rgba(47, 48, 58, 0.8);
 }
-.make-text{
-font-weight: 700;
-letter-spacing: 0.03em;
-text-align: center;
-text-transform: uppercase;
-color:var(--color-text)
+.make-text {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-text);
 }
 /* team */
 .team-list {
@@ -558,6 +597,6 @@ color:var(--color-text)
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition-duration: 250ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
