@@ -8,6 +8,8 @@
   --color-bg: #2f303a;
   --secondary-color-btn: #188ce8;
   --primary-color-icon: #afb1b8;
+  --transition-duration: transition-duration: 250ms;
+  --transition-timing-function: transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-weight: 400;
@@ -600,3 +602,26 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.portfolio-card-description{
+  position: relative;
+}
+.portfolio-card-text{
+position: absolute;
+display:block;
+top: 0;
+left: 0;
+padding:63px 24px;
+width: 100%;
+height: 100%;
+font-size: 18px;
+line-height: 1.56;
+letter-spacing: 0.03em;
+color:var(--color-text);
+background: rgba(33, 150, 243, 0.9);
+transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+opacity: 0;
+}
+.portfolio-card-item :hover .portfolio-card-text{
+  opacity: 1;
+} 
