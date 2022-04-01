@@ -623,8 +623,10 @@ img {
   transition-duration: var(--trans-dur-250ms);
   transition-timing-function: var(--cubic-bezier);
   transform: translateY(100%);
+  opacity: 0;
 }
 .portfolio-link:hover .portfolio-card-text,
 .portfolio-link:focus .portfolio-card-text {
   transform: translateY(0%);
+  opacity: 1;
 }
