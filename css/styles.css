@@ -567,7 +567,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   background: var(--secondary-color-bg);
-  transition-property: color, background;
+  transition-property: color, background, box-shadow;
   transition-duration: var(--trans-dur-250ms);
   transition-timing-function: var(--cubic-bezier);
 }
